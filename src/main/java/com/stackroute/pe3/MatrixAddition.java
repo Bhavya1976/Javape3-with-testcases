@@ -5,8 +5,8 @@ import java.lang.Class;
 
 
 public class MatrixAddition {
-    public static void matrixAddition(){
-        int m, n, i, j;
+    public static int[][] matrixAddition(int i,int j){
+        int m, n;
         Scanner in = new Scanner(System.in);
 
         System.out.println("Enter the number of rows and columns of matrix");
@@ -15,7 +15,7 @@ public class MatrixAddition {
 
         int first[][] = new int[m][n];
         int second[][] = new int[m][n];
-        int sum[][] = new int[m][n];
+        int[][] sum = new int[m][n];
 
         System.out.println("Enter the elements of first matrix");
 
@@ -42,7 +42,9 @@ public class MatrixAddition {
 
             System.out.println();
         }
+        return sum;
     }
+
 }
 
 
