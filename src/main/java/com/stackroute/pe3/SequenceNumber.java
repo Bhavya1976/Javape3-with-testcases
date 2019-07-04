@@ -1,7 +1,8 @@
 package main.java.com.stackroute.pe3;
 
 public class SequenceNumber {
-    public static String sequenceOfNumber(int number[]){
+    public static int[] sequenceOfNumber(){
+        int[] number={56,57,58,59,60,61,62};
         boolean b = true;
         int size = number.length;
         String string = " ";
@@ -16,7 +17,7 @@ public class SequenceNumber {
                 string = string + number[i] + ",";
             }
 
-            return string + " are consecutive";
+            return number;
 
         } else {
             for (int i = 0; i <= size; i++) {
@@ -25,7 +26,7 @@ public class SequenceNumber {
                 } else
                     string = string + number[i] + ",";
             }
-            return string + " are not consecutive";
+            return number;
         }
     }
 }

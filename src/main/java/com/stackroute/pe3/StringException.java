@@ -3,9 +3,10 @@ import java.io.FileNotFoundException;
 
 
 public class StringException {
-    public static void firstException(String msg) {
-            msg = "this is not found  bound to execute";
-            System.out.println(msg);
+    public static String firstException(String msg) {
+            msg = "this is not found bound to execute";
+            return msg;
+
         }
 
         public static void main(String[] args) throws Exception {

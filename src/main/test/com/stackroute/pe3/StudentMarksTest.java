@@ -29,9 +29,9 @@ public class StudentMarksTest {
 
 
 
-        int[] actual = marks.studentMarksCalculation(2, new int[] {30,60});
+        int[] actual = marks.studentMarksCalculation(new int[] {30,60});
 
-        assertEquals("30,60 ", actual);
+        assertEquals("30","60", actual);
 
 
     }
@@ -41,8 +41,8 @@ public class StudentMarksTest {
 //        arrange
 
 
-        int[] actual = marks.studentMarksCalculation(2, new int[] {110,160});
+        int[] actual = marks.studentMarksCalculation( new int[] {110,160});
 
-        assertEquals("number out of range exception ", actual);
+        assertEquals("", actual);
     }
 }

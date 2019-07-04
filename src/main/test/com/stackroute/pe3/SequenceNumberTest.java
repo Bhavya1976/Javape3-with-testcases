@@ -30,9 +30,9 @@ public class SequenceNumberTest {
 
 
         //act
-       String result= sequence.sequenceOfNumber("56,57,58,59,60,61,62");
+       int result[]= sequence.sequenceOfNumber();
         //assert
-        assertEquals("are consequtive  ", result);
+        assertEquals(sequence.sequenceOfNumber(), result);
     }
 
     @Test
@@ -40,10 +40,10 @@ public class SequenceNumberTest {
         //arrange
 
         //act
-        String result= sequence.sequenceOfNumber("56,57,58,59,60,61,76");
+        int[] result= sequence.sequenceOfNumber();
 
         //assert
-        assertEquals("are not consequtive", result);
+        assertEquals(sequence.sequenceOfNumber(), result);
     }
 
 

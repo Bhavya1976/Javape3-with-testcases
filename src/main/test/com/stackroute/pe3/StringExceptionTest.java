@@ -30,10 +30,10 @@ public class StringExceptionTest {
 
 
         //act
-       String result = string.firstException();
+       String result = string.firstException("");
 
         //assert
-        assertEquals("this is not found to excute",result );
+        assertEquals("this is not found bound to execute",result );
     }
 
 

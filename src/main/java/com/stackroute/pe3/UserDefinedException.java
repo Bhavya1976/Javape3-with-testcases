@@ -5,7 +5,9 @@ public static String userException(String str){
     int result = 0;                                                      // Somewhere to store a result.
     int arraySize = 3;
     int badSize = -1;                                                  // A negative size to generate NegativeArraySizeException.
-    int[] array = null;                                                // Define an integer array variable.
+    int[] array = null;
+    String msg="";
+    // Define an integer array variable.
 
     for(int choice = 0; choice<3 ; ++choice)
         try {
@@ -21,23 +23,21 @@ public static String userException(String str){
                     result = array[arraySize];                                    // Generates an ArrayIndexOutOfBoundsException.
                     break;
             }
-        } catch(NullPointerException e) {                                  // Catch the NullPointerException:
-            System.out.println("\nNullPointerException Exception caught. " + "Message in NullPointerException is:\n" +
-                    "\n" + e + "\n");
-            System.out.println("The contents of the stack trace are:\n");
-            e.printStackTrace();
-        } catch(NegativeArraySizeException e) {                            // Catch the NegativeArraySizeException:
-            System.out.println("\nNegativeArraySizeException Exception caught. " +
-                    "Message in NegativeArraySizeException is:\n" +
-                    "\n" + e + "\n");
-            System.out.println("The contents of the stack trace are:\n");
-            e.printStackTrace();
-        } catch(ArrayIndexOutOfBoundsException e) {                        // Catch the ArrayIndexOutOfBoundsException:
-            System.out.println("\nArrayIndexOutOfBoundsException Exception caught. " +
-                    "Message in ArrayIndexOutOfBoundsException is:\n" +
-                    "\n" + e + "\n");
-            System.out.println("The contents of the stack trace are:\n");
-            e.printStackTrace();
+        }
+    catch(NullPointerException e) {                                  // Catch the NullPointerException:
+
+            str="NullPointerException Exception caught." ;
+
+        }
+    catch(NegativeArraySizeException e) {                            // Catch the NegativeArraySizeException:
+
+            str="NegativeArraySizeException Exception caught.";
+        }
+    catch(ArrayIndexOutOfBoundsException e) {                        // Catch the ArrayIndexOutOfBoundsException:
+
+            str="ArrayIndexOutOfBoundsException Exception caught.";
+
+
         }
     return str;
 }

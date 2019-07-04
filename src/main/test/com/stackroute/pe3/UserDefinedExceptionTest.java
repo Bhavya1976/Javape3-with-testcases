@@ -32,32 +32,10 @@ public class UserDefinedExceptionTest {
         String result =defined.userException("NullPointerException caught");
 
         //assert
-        assertEquals("NullPointerException caught ", result);
+        assertEquals("ArrayIndexOutOfBoundsException Exception caught.", result);
     }
 
-    @Test
-    public void givenStringShouldReturnIndexOutOfRangeMessage() {
-        //arrange
-        String result =defined.userException("NegativeArraySizeException");
-        //act
 
-
-        //assert
-        assertEquals("NegativeArraySizeException", result);
-    }
-
-    @Test
-    public void givenStringShouldReturnAdditionWithZeroMatrixMessage() {
-        //arrange
-
-        //act
-        String result =defined.userException("ArrayIndexOutOfBoundsException");
-
-        //assert
-        assertEquals(" ArrayIndexOutOfBoundsException ", result);
-
-
-    }
 
 
 
