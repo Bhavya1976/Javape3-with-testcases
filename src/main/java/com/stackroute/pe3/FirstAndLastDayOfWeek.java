@@ -13,14 +13,14 @@ public class FirstAndLastDayOfWeek
 
     public String firstAndLastDayOfWeek()
     {
-
+        String str="";
         StringBuilder stringBuilder = new StringBuilder();
 
         Calendar c = Calendar.getInstance();
 
         c.set(Calendar.DAY_OF_WEEK,Calendar.MONDAY);
 
-        DateFormat dateformat = new SimpleDateFormat(" DD/MM/YYYY");
+        DateFormat dateformat = new SimpleDateFormat("EEE dd/MM/yyyy");
 
         stringBuilder = stringBuilder.append(dateformat.format(c.getTime()));
         for(int i = 0; i<6;i++)
@@ -28,7 +28,8 @@ public class FirstAndLastDayOfWeek
             c.add(Calendar.DATE, 1);
         }
         stringBuilder = stringBuilder.append("\n"+dateformat.format(c.getTime()));
-        return stringBuilder.toString();
+        str= stringBuilder.toString();
+        return str;
 
     }
 }

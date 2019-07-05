@@ -21,6 +21,11 @@ public class FirstAndLastDayOfWeekTest {
 
         day = null;
     }
-
+    @Test
+    public void givenInputShouldReturnFirstAndLastDay(){
+        String result=day.firstAndLastDayOfWeek();
+        assertEquals("Mon 01/07/2019\n" +
+                "Sun 07/07/2019",result);
+    }
 
 }
