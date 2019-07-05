@@ -1,67 +1,36 @@
 package main.test.com.stackroute.pe3;
 
-import org.junit.Before;
-
-
-    import org.junit.After;
+import main.java.com.stackroute.pe3.MatrixAddition;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import main.java.com.stackroute.pe3.MatrixAddition;
-
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
-    public class MatrixAdditionTest {
-        MatrixAddition add;
+public class MatrixAdditionTest {
+    MatrixAddition add;
+    int[][] expectedResult;
+    int[][] actualResult;
+    @Before
+    public void setUp(){
 
-        @Before
-        public void setUp() {
+        add=new MatrixAddition();
+    }
 
-            add = new MatrixAddition();
-        }
-
-        @After
-        public void tearDown() {
-
-            add = null;
-        }
-
-
-        @Test
-        public void givenNumberShouldReturnAdditionOfMatrixMessage() {
-            //arrange
-
-
-            //act
-            int[][] result = add.matrixAddition(2,3);
-
-            //assert
-            assertEquals(" ", result);
-        }
-
-        @Test
-        public void givenStringShouldReturnIndexOutOfRangeMessage() {
-            //arrange
-
-            //act
-            int[][] result = add.matrixAddition(-1,9 );
-
-            //assert
-            assertEquals("Index Out Of Bound", result);
-        }
-
-        @Test
-        public void givenStringShouldReturnAdditionWithZeroMatrixMessage() {
-            //arrange
-
-            //act
-            int[][] result = add.matrixAddition(6,0 );
-
-            //assert
-            assertEquals("  ", result);
-
-
-        }
-
-
+    @After
+    public void tearDown(){
+        add=null;
 
     }
+
+    @Test
+    public void givenMultiDimensionalMatrixReturnsSum(){
+
+        actualResult=add.matrixAddition();
+         int[][] result={{-2,8,7},{10,8,6}};
+        assertArrayEquals(result,actualResult);
+    }
+
+
+
+}

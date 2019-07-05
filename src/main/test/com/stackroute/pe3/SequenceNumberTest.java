@@ -27,24 +27,15 @@ public class SequenceNumberTest {
     @Test
     public void givenNumberShouldReturnSequenceOfNumbersMessage() {
         //arrange
-
-
-        //act
-       int result[]= sequence.sequenceOfNumber();
+       //act
+        int input[]={56,57,58,59,60,61,62};
+         boolean actual=sequence.areConsecutive(input,7);
+        boolean result=true;
         //assert
-        assertEquals(sequence.sequenceOfNumber(), result);
+        assertEquals(actual, result);
     }
 
-    @Test
-    public void givenStringShouldReturnIndexOutOfRangeMessage() {
-        //arrange
 
-        //act
-        int[] result= sequence.sequenceOfNumber();
-
-        //assert
-        assertEquals(sequence.sequenceOfNumber(), result);
-    }
 
 
 }

@@ -17,7 +17,7 @@ public class DisplayNewWords {
                 word1[i++] = null;
             } else {
                 word1[i++] = word.replaceAll("[aeiou]", "");
-                System.out.println(word);
+               // System.out.println(word);
             }
 
         }

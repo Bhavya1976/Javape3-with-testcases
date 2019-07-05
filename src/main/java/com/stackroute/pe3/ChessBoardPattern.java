@@ -2,37 +2,30 @@ package main.java.com.stackroute.pe3;
 import java.lang.String;
 
 public class ChessBoardPattern {
-    public static String printChessBoardPattern(int row,int column){
+    public static String[][] printChessBoardPattern(){
 
+        String board[][] = new String[8][8];
+        String str = "";
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (i % 2 == 0) {
+                    if (j % 2 == 0) {
+                        board[i][j] = "WW|";
 
-            StringBuffer result = new StringBuffer("");
-            for(int i=1;i<=8;i+=2){
-                for(int j=1;j<=8;j++){
-                    if(j%2==1){
-                        result.append("WW");
-                    }else {
-                        result.append("BB");
+                    } else {
+                        board[i][j] = "BB|";
                     }
-
-                    result.append("|");
+                } else {
+                    if (j % 2 == 0)
+                        board[i][j] = "BB|";
+                    else
+                        board[i][j] = "WW|";
                 }
-                result.append("\n");
-                for(int j=1;j<=8;j++){
-                    if(j%2==0){
-                        result.append("WW");
-                    }else {
-                        result.append("BB");
-                    }
 
-                    result.append("|");
-                }
-                result.append("\n");
 
             }
-            System.out.println(result.substring(0,result.length()-1));
-
-            return result.substring(0,result.length()-1);
-
+        }
+        return board;
         }
 
     }

@@ -5,47 +5,32 @@ import java.lang.Class;
 
 
 public class MatrixAddition {
-    public static int[][] matrixAddition(int i,int j){
-        int m, n;
-        Scanner in = new Scanner(System.in);
+    public static int[][] matrixAddition( ) {
 
-        System.out.println("Enter the number of rows and columns of matrix");
-        m = in.nextInt();
-        n  = in.nextInt();
-
-        int first[][] = new int[m][n];
-        int second[][] = new int[m][n];
-        int[][] sum = new int[m][n];
-
-        System.out.println("Enter the elements of first matrix");
-
-        for (i = 0; i < m; i++)
-            for ( j= 0; j < n; j++)
-                first[i][j] = in.nextInt();
-
-        System.out.println("Enter the elements of second matrix");
-
-        for (i = 0 ; i < m ; i++)
-            for (j = 0 ; j < n ; j++)
-                second[i][j] = in.nextInt();
-
-        for (i = 0; i < m; i++)
-            for (j = 0; j < n; j++)
-                sum[i][j] = first[i][j] + second[i][j];  //replace '+' with '-' to subtract matrices
-
-        System.out.println("Sum of the matrices:");
-
-        for (i = 0; i < m; i++)
-        {
-            for (j = 0; j < n; j++)
-                System.out.print(sum[i][j]+"\t");
-
+        int rows = 2, columns = 3;
+        int[][] firstMatrix = {{2, 3, 4}, {5, 2, 3}};
+        int[][] secondMatrix = {{-4, 5, 3}, {5, 6, 3}};
+        // Adding Two matrices
+        int[][] sum = new int[rows][columns];
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < columns; j++) {
+                sum[i][j] = firstMatrix[i][j] + secondMatrix[i][j];
+            }
+        }
+        // Displaying the result
+        System.out.println("Sum of two matrices is: ");
+        for (int[] row : sum) {
+            for (int column : row) {
+                System.out.print(column + "    ");
+            }
             System.out.println();
         }
+
         return sum;
     }
 
 }
+
 
 
 

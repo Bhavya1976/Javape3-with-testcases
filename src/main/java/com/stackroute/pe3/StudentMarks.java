@@ -3,24 +3,22 @@ package main.java.com.stackroute.pe3;
 import java.util.Scanner;
 
 public class StudentMarks {
-    public static int[] studentMarksCalculation( int[] stuGrades) {
 
-        int output[];
-        for (int i = 0; i < stuGrades.length; i++) {
-            try {
-                if (stuGrades[i] > 0 && stuGrades[i] < 100) {
+    public static String studentMarksDisplay(int[]grades){
+        String result="";
 
-                } else {
-                    throw new Exception("InputIsOutOfRange");
-                }
-            } catch (Exception e) {
-                System.out.println("number out of range exception");
-            } finally {
-                System.out.println("given nunber is less than actual number");
+        for(int i=0;i<grades.length;i++){
+
+            if(grades[i]<=100 & grades[i]>0){
+                result =result+grades[i]+" ";
+
             }
+            else {
+                result +=" grades should be 0to100 ";
 
+            }
         }
-        return stuGrades;
+        return result;
     }
 }
 

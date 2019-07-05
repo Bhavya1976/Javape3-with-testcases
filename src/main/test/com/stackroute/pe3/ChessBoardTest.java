@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class ChessBoardTest {
@@ -31,12 +32,12 @@ public class ChessBoardTest {
         public void givenNumberShouldReturnAdditionOfMatrixMessage() {
             //arrange
 
-
-            //act
-            String result = create.printChessBoardPattern(8,8);
-
-            //assert
-            assertEquals(" ", result);
+            String[][] result = create.printChessBoardPattern();
+            assertArrayEquals(new String[][]{{"WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|"}, {"BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|"}
+                    , {"WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|"}, {"BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|"},
+                    {"WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|"}, {"BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|"},
+                    {"WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|"}, {"BB|", "WW|", "BB|", "WW|", "BB|", "WW|", "BB|", "WW|"}}, result);
+        }
         }
 
-}
+

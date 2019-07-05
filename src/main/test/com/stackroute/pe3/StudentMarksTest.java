@@ -23,26 +23,25 @@ public class StudentMarksTest {
     }
 
 
+
     @Test
-    public void givenGradesShouldReturnStudentGrades() {
-//        arrange
-
-
-
-        int[] actual = marks.studentMarksCalculation(new int[] {30,60});
-
-        assertEquals("30","60", actual);
-
+    public void givenStudentGradesAsInputs(){
+        String result=StudentMarks.studentMarksDisplay(new int[] {40,50,60,70});
+        assertEquals("40 50 60 70 ",result);
 
     }
-    //
     @Test
-    public void givenGradesShouldReturnException() {
-//        arrange
+    public void givenStudentGradesIsGraterThan100PrintErrMsg(){
+        String result=StudentMarks.studentMarksDisplay(new int[] {40,50,60,170});
+        assertEquals("40 50 60  grades should be 0to100 ",result);
 
-
-        int[] actual = marks.studentMarksCalculation( new int[] {110,160});
-
-        assertEquals("", actual);
     }
+    @Test
+    public void givenStudentGradesIslessthanZeroPrintErrMsg(){
+        String result=StudentMarks.studentMarksDisplay(new int[] {-40,50,60,170});
+        assertEquals(" grades should be 0to100 50 60  grades should be 0to100 ",result);
+
+    }
+
+
 }
